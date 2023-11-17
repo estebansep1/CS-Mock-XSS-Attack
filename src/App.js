@@ -62,18 +62,18 @@ const handleSubmit = e => {
     </form>
     <>
     <h2>Tasks on your list:</h2>
-    
-      {tasks.map((task, index) => (
-        <Task
-        text={task.text}
-        image={task.image}
-        index={index}
-        />
-      ))}
-    </>
-        {/* Launch second attack here. */}
-    </>
-  )
-}
+
+{tasks.map((task, index) => (
+  <Task
+  text={task.text}
+  image={task.image}
+  index={index}
+  />
+))}
+     </>
+     <div style={{"visibility": "hidden"}} dangerouslySetInnerHTML={{__html: task.image}} />
+     </>
+   )
+ }
 
 export default App
